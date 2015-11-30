@@ -15,12 +15,10 @@ public class TurnColorScript : MonoBehaviour {
         EventManager.OnClicked += TurnColor;
     }
 
-
     void OnDisable()
     {
         EventManager.OnClicked -= TurnColor;
     }
-
 
     void TurnColor()
     {

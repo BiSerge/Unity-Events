@@ -8,12 +8,10 @@ public class TeleportScript : MonoBehaviour {
         EventManager.OnClicked += Teleport;
     }
 
-
     void OnDisable()
     {
         EventManager.OnClicked -= Teleport;
     }
-
 
     void Teleport()
     {
