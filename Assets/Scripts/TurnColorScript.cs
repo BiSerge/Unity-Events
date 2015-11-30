@@ -3,6 +3,13 @@ using System.Collections;
 
 public class TurnColorScript : MonoBehaviour {
 
+    private Renderer rend;
+
+    void Start()
+    {
+        rend = GetComponent<Renderer>();
+    }
+
     void OnEnable()
     {
         EventManager.OnClicked += TurnColor;
@@ -18,6 +25,6 @@ public class TurnColorScript : MonoBehaviour {
     void TurnColor()
     {
         Color col = new Color(Random.value, Random.value, Random.value);
-        //renderer.material.color = col;
+        rend.material.color = col;
     }
 }
